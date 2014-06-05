@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository increment="1401950114800" name="Release" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.acme.prime.speaker.api"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="1.0.0.201406042048"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="668e601018cef1fcc1e6ba8bb964aaca7a3de74566b24191322a8700b8f1795b"/>
+      <attribute name="url" value="com.acme.prime.speaker.api/com.acme.prime.speaker.api-1.0.0.jar"/>
+      <attribute name="size" type="Long" value="3693"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="com.acme.prime.speaker.api"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201406042048"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="com.acme.prime.speaker.api"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201406042048"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.acme.prime.speaker.api"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.acme.prime.speaker.api"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201406042048"/>
+    </capability>
+    <requirement namespace="compile-only"/>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.acme.prime.speaker.command"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="1.0.0.201406042048"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="8e99e14f7b764ea0371e66279f726c7fbdc9cf966d8c8a28e5004d135abcac71"/>
+      <attribute name="url" value="com.acme.prime.speaker.command/com.acme.prime.speaker.command-1.0.0.jar"/>
+      <attribute name="size" type="Long" value="4300"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="com.acme.prime.speaker.command"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201406042048"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="com.acme.prime.speaker.command"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201406042048"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.acme.prime.speaker.api)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.slf4j)(version&gt;=1.7.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.ds)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.acme.prime.speaker.provider"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="1.0.0.201406042048"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="26a2bd0389473880323df040e23c114c4ed65b108848158f37ebbab988e003cf"/>
+      <attribute name="url" value="com.acme.prime.speaker.provider/com.acme.prime.speaker.provider-1.0.0.jar"/>
+      <attribute name="size" type="Long" value="6481"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="com.acme.prime.speaker.provider"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201406042048"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="com.acme.prime.speaker.provider"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201406042048"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.acme.prime.speaker.api"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.acme.prime.speaker.provider"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201406042048"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.acme.prime.speaker.api)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.slf4j)(version&gt;=1.7.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <attribute name="osgi.extender" value="ds"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.ds)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+  </resource>
+</repository>

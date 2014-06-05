@@ -1,0 +1,15 @@
+#
+#  GOGO COMMAND BUNDLE (speaker) 
+#
+
+Bundle-Description: \
+	Provides a command to the Gogo shell. \
+	\
+	${warning;Please update this Bundle-Description in com.acme.prime.speaker/command.bnd}
+	
+
+Private-Package:  \
+	com.acme.prime.speaker.command
+	
+	
+-includeresource: {readme.md}

@@ -1,0 +1,18 @@
+#
+# 	BUNDLE 
+#
+
+Bundle-Description: \
+	The provider bundle for com.acme.prime.speaker. \
+	\
+	${warning;Please update this Bundle-Description in com.acme.prime.speaker/api.bnd}
+	
+Export-Package:  \
+	com.acme.prime.speaker.api
+
+Private-Package:  \
+	com.acme.prime.speaker.provider
+
+Require-Capability: osgi.extender;osgi.extender=ds;effective:=active
+
+-includeresource: {readme.md}
